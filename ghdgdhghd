@@ -58,7 +58,7 @@ local function lerpColor(startColor, endColor, alpha)
 end
 
 -- Tempo de transição (em segundos)
-local transitionTime = 0.75 -- 5
+local transitionTime = 0.5
 
 -- Remover camisa e calça do jogador
 character.Shirt:Destroy()
@@ -79,7 +79,8 @@ while true do
         for _, part in ipairs(character:GetDescendants()) do
             if part:IsA("BasePart") then
                 part.Color = lerpColor(startColor, endColor, alpha)
-                 part.Transparency = 0.85
+                part.Transparency = 0.25
+                part.Material = Enum.Material.ForceField -- Aqui está a linha que adiciona o material ForceField
             end
         end
         
@@ -109,12 +110,11 @@ local function lerpColor(startColor, endColor, alpha)
 end
 
 -- Tempo de transição (em segundos)
-local transitionTime = 0.56 -- 5
+local transitionTime = 0.42
 
 -- Remover camisa e calça do jogador
 character.Shirt:Destroy()
 character.Pants:Destroy()
-character.Hair:Destroy()
 
 -- Loop infinito para alterar as cores do corpo
 while true do
@@ -131,7 +131,8 @@ while true do
         for _, part in ipairs(character:GetDescendants()) do
             if part:IsA("BasePart") then
                 part.Color = lerpColor(startColor, endColor, alpha)
-                 part.Transparency = 0.45
+                part.Transparency = 0.35
+                part.Material = Enum.Material.ForceField -- Aqui está a linha que adiciona o material ForceField
             end
         end
         
@@ -140,7 +141,7 @@ while true do
 end
 end)
 
-HDVBFD:CreateButton("Rainbow (Beta-V2)", function()
+HDVBFD:CreateButton("Rainbow (Beta-V3)", function()
   game.StarterGui:SetCore("SendNotification", {
 Title = "Rainbow Active",
 Text = "(Client)",
@@ -161,12 +162,11 @@ local function lerpColor(startColor, endColor, alpha)
 end
 
 -- Tempo de transição (em segundos)
-local transitionTime = 0.33 -- 5
+local transitionTime = 0.33
 
 -- Remover camisa e calça do jogador
 character.Shirt:Destroy()
 character.Pants:Destroy()
-character.Hair:Destroy()
 
 -- Loop infinito para alterar as cores do corpo
 while true do
@@ -183,7 +183,8 @@ while true do
         for _, part in ipairs(character:GetDescendants()) do
             if part:IsA("BasePart") then
                 part.Color = lerpColor(startColor, endColor, alpha)
-                 part.Transparency = 0.45
+                part.Transparency = 0.5
+                part.Material = Enum.Material.ForceField -- Aqui está a linha que adiciona o material ForceField
             end
         end
         
